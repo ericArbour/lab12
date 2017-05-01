@@ -1,0 +1,15 @@
+html {
+  background-color: #e8d988;
+}
+main {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+h1, h3 {
+  text-align: center;
+}
+ul {
+  float: left;
+  clear: both;
+}

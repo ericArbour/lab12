@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+  <head>
+    <meta charset="utf-8">
+    <title>To-Do List</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body ng-controller="myController">
+    <main>
+      <h1>To-Do List</h1>
+      <input ng-model="item" type="text" placeholder="activity">
+      <button type="button" ng-click="addItem(item)">Add Item</button>
+      <h3>Things To Do:</h3>
+      <input ng-model="filter" type="text" placeholder="filter list">
+      <ul ng-repeat="item in itemArray | filter: filter track by $index">
+        <li>{{ item }} <button type="button" ng-click="removeItem($index)">Delete</button></li>
+      </ul>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
